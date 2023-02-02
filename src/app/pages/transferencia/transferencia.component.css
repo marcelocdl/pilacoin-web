@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+header{
+    width: 100%;
+    height: 56px;
+    background: rgb(26, 139, 64);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    margin-left: 20px;
+    font-family: 'Paytone One', sans-serif;
+}
+.logo:hover{
+    color: rgb(208, 218, 77);
+    transition: .2s ease-in;
+}
+.logo-img{
+    width: 45px;
+    height: 45px;
+    margin-top: -0.6rem;
+    margin-right: 4px;
+}
+
+ul li{
+    padding-top: 1rem;
+    display: inline-block;
+    margin-right: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+ul li a:hover{
+    color: rgb(208, 218, 77);
+    transition: .2s ease-in;
+}
+
+.button-logout{
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.button-logout:hover{
+    color: rgb(26, 139, 64);
+    background-color: white;
+    transition: .2s ease-in;
+}
+
+h4 {
+    color: white;
+}
+
+h5{
+    margin-top: 10px;
+    color: white;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 8rem;
+    height: 3rem;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

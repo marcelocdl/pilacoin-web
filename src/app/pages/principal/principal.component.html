@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PilaCoin</title>
+</head>
+<body>
+    
+    <header>
+        <a href="/principal" class="logo"><img class="logo-img" src="../../../assets/logo.png" />PilaCoin</a>
+        <ul>
+            <li><a href="/principal">Home</a></li>
+            <li><a href="/transferencia">Transferência</a></li>
+        </ul>
+        <a href="#" class="button-logout">Logout</a>
+    </header>
+
+    <div>           
+           
+        <div class="flex-parent jc-center">    
+            <button class="start" (click)="startMineracao()">Minerar</button>
+        </div>
+
+        <div class="flex-parent jc-center">
+            <button class="stop" (click)="stopMineracao()">Parar</button>        
+        </div>
+      </div>
+    
+</body>
+</html>

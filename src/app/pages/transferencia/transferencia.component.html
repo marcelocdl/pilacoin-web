@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PilaCoin</title>
+</head>
+<body>
+    
+    <header>
+        <a href="/principal" class="logo"><img class="logo-img" src="../../../assets/logo.png" />PilaCoin</a>
+        <ul>
+            <li><a href="/principal">Home</a></li>
+            <li><a href="/transferencia">Transferência</a></li>
+        </ul>
+        <a href="#" class="button-logout">Logout</a>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" style="margin-top: 2rem;">
+                
+
+            </div>
+            <div class="col-sm" style="margin-top: 2rem;">
+                <h4>Transferência:</h4>
+
+                <h5>Colega</h5>
+                <select class="form-control form-control-sm" id="f_colega" formControlName="id_colega">
+                    <option *ngFor='let colega of colegas' [selected]="colega === colega" 
+                    [value]="colega.id">{{colega.nome}}</option>   
+                </select>
+
+                <h5>Quantidade de pilas</h5>
+                <input type="text">
+                
+                <div style="margin-top: 2rem;">
+                <button class="button">Transferir</button>
+                </div>
+
+                
+            </div>
+            <div class="col-sm">
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
