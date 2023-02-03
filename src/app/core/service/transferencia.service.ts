@@ -9,7 +9,7 @@ import { Transacao } from '../model/transacao';
 export class TransferenciaService {
 
 
-  private readonly API_URL = 'http://localhost:8080/';
+  private readonly API_URL = 'http://localhost:8080/api/';
 
   constructor(
     private httpClient: HttpClient
@@ -18,6 +18,6 @@ export class TransferenciaService {
 
  
   transferirPila(transacao: Transacao): Observable<String> {   
-    return this.httpClient.post<String>(this.API_URL+'transferePila', transacao);      
+    return this.httpClient.post<String>(this.API_URL+'transferencia', transacao);      
   }
 }

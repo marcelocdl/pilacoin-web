@@ -14,32 +14,42 @@
             <li><a href="/principal">Home</a></li>
             <li><a href="/transferencia">Transferência</a></li>
         </ul>
-        <a href="#" class="button-logout">Logout</a>
+        <a (click)="logout()" class="button-logout">Logout</a>
     </header>
 
     <div class="container">
         <div class="row">
             <div class="col-sm" style="margin-top: 2rem;">
                 
-
             </div>
             <div class="col-sm" style="margin-top: 2rem;">
-                <h4>Transferência:</h4>
-
-                <h5>Colega</h5>
-                <select class="form-control form-control-sm" id="f_colega" formControlName="id_colega">
-                    <option *ngFor='let colega of colegas' [selected]="colega === colega" 
-                    [value]="colega.id">{{colega.nome}}</option>   
-                </select>
-
-                <h5>Quantidade de pilas</h5>
-                <input type="text">
                 
-                <div style="margin-top: 2rem;">
-                <button class="button">Transferir</button>
+                <div class="box-wallet">
+                    <div class="title">
+                        {{ meus_pilas }}        
+                    </div>
                 </div>
 
-                
+                <form [formGroup]="formulario" (ngSubmit)="transferePila()">
+                    <h4>Transferência:</h4>
+
+                    <h5>Colega</h5>
+                    <select class="form-control form-control-sm" id="f_colega" formControlName="chaveUsuarioDestino">
+                        <option *ngFor='let colega of colegas' [selected]="colega === colega" 
+                        [value]="colega.chavePublica">{{colega.nome}}</option>   
+                    </select>
+
+                    <h5>PilaCoin</h5>
+                    <select class="form-control form-control-sm" id="f_pilas" formControlName="nonce">
+                        <option *ngFor='let pila of pilas' [selected]="pila === pila" 
+                        [value]="pila.nonce">{{pila.nonce}}</option>   
+                    </select>
+
+                    <div style="margin-top: 2rem;">
+                        <button class="button" type="submit">Transferir</button>
+                    </div>
+
+                </form> 
             </div>
             <div class="col-sm">
                 

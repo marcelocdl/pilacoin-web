@@ -13,7 +13,7 @@ export class PilacoinService {
     private httpClient: HttpClient
   ) { }
 
-  private readonly API_URL = 'http://localhost:8080/';
+  private readonly API_URL = 'http://localhost:8080';
 
 
   startMineracao(): Observable<String> {
@@ -25,7 +25,11 @@ export class PilacoinService {
   }
 
   getMeusPilas():  Observable<pilaCoin[]>{
-    return this.httpClient.get<pilaCoin[]>(this.API_URL+'/api/buscarPilas'); 
+    return this.httpClient.get<pilaCoin[]>(this.API_URL+'/api/buscarPila'); 
+  }
+
+  getNumPilas():  Observable<number>{
+    return this.httpClient.get<number>(this.API_URL+'/api/buscarNumPila'); 
   }
 
   getColegas(): Observable<colegas[]>{
